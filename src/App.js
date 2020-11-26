@@ -23,7 +23,7 @@ function App() {
   return (
     <Container className="my-4">
       <h1 className="mb-4">GitHub Jobs</h1>
-      <SearchForm params={params} onParamChange={handleParamChange} disable={loading || !!error}></SearchForm>
+      <SearchForm params={params} onParamChange={handleParamChange} disable={!!error}></SearchForm>
       {!error && <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />}
       {loading && <h1>Loading...</h1>}
       {loading && <div style={{ height: "150vh" }}></div>}
